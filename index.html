@@ -12,40 +12,59 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Portfolio image fitting: only affects URWAY, Agtrinsic and SalonManagement -->
+		<!-- Full image display for URWAY, Agtrinsic and SalonManagement only -->
 		<style>
-			/*
-				The Landed theme uses each spotlight image as a background.
-				These overrides keep the original spotlight/scroll animation,
-				but fit the new combined project artwork into the visible image side
-				instead of heavily cropping it.
-			*/
-			.spotlight.portfolio-project > .image {
-				background-size: 72% auto !important;
-				background-repeat: no-repeat !important;
-				background-color: #1c1d26;
-			}
+			@media screen and (min-width: 981px) {
 
-			/* style2 right = image on left, information on right */
-			.spotlight.portfolio-project.style2.right > .image {
-				background-position: left center !important;
-			}
+				.spotlight.portfolio-project > .image.main {
+					display: block !important;
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					height: 100%;
+					width: calc(100% - 28em);
+					margin: 0;
+					overflow: hidden;
+					border-radius: 0;
+					z-index: 1;
+					pointer-events: none;
+					background: transparent;
+				}
 
-			/* style3 left = information on left, image on right */
-			.spotlight.portfolio-project.style3.left > .image {
-				background-position: right center !important;
-			}
+				/* Information left -> image right */
+				.spotlight.portfolio-project.left > .image.main {
+					left: auto;
+					right: 0;
+				}
 
-			/* On smaller screens, prioritize showing the complete artwork. */
-			@media screen and (max-width: 980px) {
-				.spotlight.portfolio-project > .image {
-					background-size: contain !important;
-					background-position: center center !important;
+				/* Image left -> information right */
+				.spotlight.portfolio-project.right > .image.main {
+					left: 0;
+					right: auto;
+				}
+
+				.spotlight.portfolio-project > .image.main > img {
+					display: block !important;
+					position: absolute !important;
+					inset: 0;
+					width: 100% !important;
+					height: 100% !important;
+					margin: 0;
+					object-fit: contain;
+					object-position: center center;
+				}
+
+				.spotlight.portfolio-project > .content {
+					z-index: 3;
+				}
+
+				.spotlight.portfolio-project > .goto-next {
+					z-index: 4;
 				}
 			}
 		</style>
 
-		<script src="http	s://kit.fontawesome.com/f184816c30.js" crossorigin="anonymous"></script>
+		<script src="https://kit.fontawesome.com/f184816c30.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body class="is-preload landing">
