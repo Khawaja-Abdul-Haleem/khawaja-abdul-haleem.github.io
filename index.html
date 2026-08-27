@@ -12,11 +12,12 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
-		<!-- Full image display for URWAY, Agtrinsic and SalonManagement only -->
+		<!-- Full image display for all left/right portfolio project sections -->
 		<style>
 			@media screen and (min-width: 981px) {
 
-				.spotlight.portfolio-project > .image.main {
+				.spotlight.left > .image.main,
+				.spotlight.right > .image.main {
 					display: block !important;
 					position: absolute;
 					top: 0;
@@ -31,19 +32,18 @@
 					background: transparent;
 				}
 
-				/* Information left -> image right */
-				.spotlight.portfolio-project.left > .image.main {
+				.spotlight.left > .image.main {
 					left: auto;
 					right: 0;
 				}
 
-				/* Image left -> information right */
-				.spotlight.portfolio-project.right > .image.main {
+				.spotlight.right > .image.main {
 					left: 0;
 					right: auto;
 				}
 
-				.spotlight.portfolio-project > .image.main > img {
+				.spotlight.left > .image.main > img,
+				.spotlight.right > .image.main > img {
 					display: block !important;
 					position: absolute !important;
 					inset: 0;
@@ -54,11 +54,13 @@
 					object-position: center center;
 				}
 
-				.spotlight.portfolio-project > .content {
+				.spotlight.left > .content,
+				.spotlight.right > .content {
 					z-index: 3;
 				}
 
-				.spotlight.portfolio-project > .goto-next {
+				.spotlight.left > .goto-next,
+				.spotlight.right > .goto-next {
 					z-index: 4;
 				}
 			}
@@ -151,9 +153,8 @@
 				<a href="#two" class="goto-next scrolly">Next</a>
 			</section>
 
-
 			<!-- URWAY -->
-			<section id="three" class="spotlight style3 left portfolio-project">
+			<section id="three" class="spotlight style3 left">
 				<span class="image fit main bottom">
 					<img src="images/URWayCombine.png" alt="" />
 				</span>
@@ -161,7 +162,6 @@
 				<div class="content">
 					<header>
 						<h2>URWAY</h2>
-
 						<p>
 							A premium driving and navigation app with custom route creation,
 							rerouting, club-based drives, events, and rally or solo navigation.
@@ -174,16 +174,14 @@
 						club social features.
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#four" class="goto-next scrolly">Next</a>
 			</section>
 
-
 			<!-- Agtrinsic -->
-			<section id="two" class="spotlight style2 right portfolio-project">
+			<section id="two" class="spotlight style2 right">
 				<span class="image fit main">
 					<img src="images/combineAgtrinsic.png" alt="" />
 				</span>
@@ -191,7 +189,6 @@
 				<div class="content">
 					<header>
 						<h2>Agtrinsic</h2>
-
 						<p>
 							An agritech application designed to help farmers understand crop
 							and field conditions through map-based management and AI-powered analysis.
@@ -204,16 +201,14 @@
 						trait analysis, and yield prediction.
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#three" class="goto-next scrolly">Next</a>
 			</section>
 
-
 			<!-- SalonManagement -->
-			<section id="three" class="spotlight style3 left portfolio-project">
+			<section id="three" class="spotlight style3 left">
 				<span class="image fit main bottom">
 					<img src="images/salonCombine.png" alt="" />
 				</span>
@@ -221,7 +216,6 @@
 				<div class="content">
 					<header>
 						<h2>SalonManagement</h2>
-
 						<p>
 							A salon management application for technician attendance,
 							scheduling, and service assignment through an intuitive workflow.
@@ -234,13 +228,11 @@
 						plus subscription flows using Stripe and In-App Purchases.
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#four" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- SmartParking -->
 			<section id="two" class="spotlight style2 right">
@@ -251,7 +243,6 @@
 				<div class="content">
 					<header>
 						<h2>SmartParking</h2>
-
 						<p>
 							With SP, you can book a slot for park your car. This app will check available slot and booked. It also pay after you check out from parking and change status of your reserved parking to available
 						</p>
@@ -261,13 +252,11 @@
 						SmartParking provide a feature to add your multiple vehicle and also can maintain history of your payment
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#three" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- Sartre -->
 			<section id="three" class="spotlight style3 left">
@@ -281,15 +270,15 @@
 						<p>A ToDo App to track the tasks and provide attractive UI</p>
 					</header>
 
-					<p>Can store assignment, fun, projects , multiple tasks. User can mark them as pending, completed, ongoing etc</p>
+					<p>
+						Can store assignment, fun, projects , multiple tasks. User can mark them as pending, completed, ongoing etc
+					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#four" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- Guardian -->
 			<section id="two" class="spotlight style2 right">
@@ -300,7 +289,6 @@
 				<div class="content">
 					<header>
 						<h2>Guardian</h2>
-
 						<p>
 							Track Students Live location, also maintain history and create their Playback to see where they go. From This app you can make geoZone with CRUD operation.
 						</p>
@@ -310,13 +298,11 @@
 						For Security Purpose. Live data will be fetched and also up-to-date you by push notification
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#three" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- SL DASHBOARD -->
 			<section id="three" class="spotlight style3 left">
@@ -327,7 +313,6 @@
 				<div class="content">
 					<header>
 						<h2>SL Dashboard</h2>
-
 						<p>
 							In SL Dashboard, we have a dashboard which contain record of Multiple Tasks and can monitor using graph View.
 						</p>
@@ -337,13 +322,11 @@
 						It is in multilingual English & Arabic, also can monitor literacry and employement rate
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#four" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- GreenBee -->
 			<section id="two" class="spotlight style2 right">
@@ -354,7 +337,6 @@
 				<div class="content">
 					<header>
 						<h2>GreenBee</h2>
-
 						<p>
 							With GreenBee, you can carry the power of Solar in your pocket. With the use of a single app, this solar app can provide feature of status checking of live device, also can power Off/On by singe tap.
 						</p>
@@ -364,15 +346,13 @@
 						Also check live Packet using graphs(Monthly, weekly, daily). Live data will be fetched and also up-to-date you by push notification
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#three" class="goto-next scrolly">Next</a>
 			</section>
 
-
-			<!-- Consumer -->
+			<!-- SmartBuilding -->
 			<section id="three" class="spotlight style3 left">
 				<span class="image fit main bottom">
 					<img src="images/smartBuilding.jpg" alt="" />
@@ -381,19 +361,19 @@
 				<div class="content">
 					<header>
 						<h2>SmartBuilding</h2>
-
 						<p>
-							An end-to-end solution designed to integrate multiple functions, such as surveillance cameras, intelligent controls, energy consumption monitoring, alarm detection, and lighting control, into a single platform, enabling users to create a dynamic and interconnected smart building environment
+							An end-to-end solution designed to integrate multiple functions,
+							such as surveillance cameras, intelligent controls, energy consumption monitoring,
+							alarm detection, and lighting control, into a single platform,
+							enabling users to create a dynamic and interconnected smart building environment.
 						</p>
 					</header>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#four" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- GoHyper -->
 			<section id="two" class="spotlight style2 right">
@@ -404,19 +384,19 @@
 				<div class="content">
 					<header>
 						<h2>GoHyper</h2>
-
 						<p>
-							With GoHyper, you can carry the power of fleet management software in your pocket. With the use of a single app, fleet managers, drivers, technicians, and other staff members may work together on crucial fleet maintenance chores. GoHyper helps teams stay ahead of the daily needs of their fleet cars and equipment since it is quick and productivity-optimized
+							With GoHyper, you can carry the power of fleet management software in your pocket.
+							With the use of a single app, fleet managers, drivers, technicians, and other staff members
+							may work together on crucial fleet maintenance chores. GoHyper helps teams stay ahead of
+							the daily needs of their fleet cars and equipment since it is quick and productivity-optimized
 						</p>
 					</header>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#three" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- FleetOps -->
 			<section id="three" class="spotlight style3 left">
@@ -427,25 +407,25 @@
 				<div class="content">
 					<header>
 						<h2>FleetOps</h2>
-
 						<p>
-							Fleet managers, drivers, technicians, and other fleet personnel can collaborate on critical fleet assignments, jobs, maintenance tasks, real-time tracking, playback, and manage everything from reports to functions in a single app.
+							Fleet managers, drivers, technicians, and other fleet personnel can collaborate on critical fleet assignments,
+							jobs, maintenance tasks, real-time tracking, playback, and manage everything from reports to functions in a single app.
 						</p>
 					</header>
 
 					<p>
-						Fleets can operate like well-oiled machines and manage everyday fleet duties with FleetOps. Vehicle data, including GPS tracking and location information, is safely kept on FleetOps servers.With their login information, administrators of the FleetOps can manage numerous fleets and track data
+						Fleets can operate like well-oiled machines and manage everyday fleet duties with FleetOps.
+						Vehicle data, including GPS tracking and location information, is safely kept on FleetOps servers.
+						With their login information, administrators of the FleetOps can manage numerous fleets and track data.
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#four" class="goto-next scrolly">Next</a>
 			</section>
 
-
-			<!-- Two -->
+			<!-- Tennis Fights -->
 			<section id="two" class="spotlight style2 right">
 				<span class="image fit main">
 					<img src="images/TennisFight.jpg" alt="" />
@@ -454,22 +434,23 @@
 				<div class="content">
 					<header>
 						<h2>Tennis Fights</h2>
-
 						<p>
-							The Tennis Fights software is designed for Tennis enthusiasts. It is a place where Tennis players from all over the world can sign up for the application and schedule tennis matches with other Tennis players in their respective regions and cities.
-							This platform is also built for business purposes in terms of revenue generation and to build the community of Tennis players
+							The Tennis Fights software is designed for Tennis enthusiasts.
+							It is a place where Tennis players from all over the world can sign up
+							for the application and schedule tennis matches with other Tennis players
+							in their respective regions and cities.
+							This platform is also built for business purposes in terms of revenue generation
+							and to build the community of Tennis players.
 						</p>
 					</header>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#three" class="goto-next scrolly">Next</a>
 			</section>
 
-
-			<!-- Three -->
+			<!-- SharifLabs -->
 			<section id="three" class="spotlight style3 left">
 				<span class="image fit main bottom">
 					<img src="images/SharifLabs.jpg" alt="" />
@@ -478,25 +459,25 @@
 				<div class="content">
 					<header>
 						<h2>SharifLabs and Diagnostics</h2>
-
 						<p>
-							Offers services in areas of Hematology, Endocrinology, Clinical Pathology, Microbiology, Molecular Biology and Histopathology with its state-of-the-art technology
+							Offers services in areas of Hematology, Endocrinology,
+							Clinical Pathology, Microbiology, Molecular Biology and Histopathology
+							with its state-of-the-art technology
 						</p>
 					</header>
 
 					<p>
-						Users can register themselves for appointment and also generate their test reports by CNIC / Passport No / TrackingID
+						Users can register themselves for appointment and also generate their test reports
+						by CNIC / Passport No / TrackingID
 					</p>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#four" class="goto-next scrolly">Next</a>
 			</section>
 
-
-			<!-- Four -->
+			<!-- Aghaaz -->
 			<section id="two" class="spotlight style2 right">
 				<span class="image fit main">
 					<img src="images/Aghaaz.jpg" alt="" />
@@ -505,19 +486,19 @@
 				<div class="content">
 					<header>
 						<h2>Aghaaz - A web portal</h2>
-
 						<p>
-							Aims to provide young people, who are about to get married or are recently married, complete access to comprehensive sexual and reproductive health (SRH) information. Aghaaz envisages a Pakistan where all young people have the information and resources available that are required for a long, healthy, stable and satisfying marriage.
+							Aims to provide young people, who are about to get married or are recently married,
+							complete access to comprehensive sexual and reproductive health (SRH) information.
+							Aghaaz envisages a Pakistan where all young people have the information and resources
+							available that are required for a long, healthy, stable and satisfying marriage.
 						</p>
 					</header>
 
-					<ul class="actions">
-					</ul>
+					<ul class="actions"></ul>
 				</div>
 
 				<a href="#three" class="goto-next scrolly">Next</a>
 			</section>
-
 
 			<!-- Five -->
 			<section id="four" class="wrapper style1 special fade-up">
@@ -573,13 +554,11 @@
 					</div>
 
 					<footer class="major">
-						<ul class="actions special">
-						</ul>
+						<ul class="actions special"></ul>
 					</footer>
 
 				</div>
 			</section>
-
 
 			<!-- Footer -->
 			<footer id="footer">
@@ -608,7 +587,6 @@
 			</footer>
 
 		</div>
-
 
 		<!-- Scripts -->
 		<script src="assets/js/jquery.min.js"></script>
