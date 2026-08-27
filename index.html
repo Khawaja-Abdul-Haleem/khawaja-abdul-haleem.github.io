@@ -2,7 +2,7 @@
 <!--
 	Landed by HTML5 UP
 	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	Free for personal and commercial use under the CCA 3.0 license
 -->
 <html>
 
@@ -33,31 +33,26 @@
 	<style>
 
 		/* =========================================================
-		   SMOOTH SCROLLING
+		   IMPORTANT:
+		   JavaScript below handles arrow scrolling.
+		   Native browser smooth scrolling is intentionally disabled
+		   to avoid double-animation / jerking.
 		   ========================================================= */
 
 		html {
-			scroll-behavior: smooth;
-			scroll-padding-top: 3.5em;
-		}
-
-
-		section {
-			scroll-margin-top: 3.5em;
+			scroll-behavior: auto !important;
 		}
 
 
 
 		/* =========================================================
-		   FULL PROJECT IMAGES + BLURRED BACKGROUND
+		   FULL PROJECT IMAGE + BLURRED BACKGROUND
 		   ========================================================= */
 
 		@media screen and (min-width: 981px) {
 
 
-			/* ---------------------------------------------------------
-			   Main sharp project image
-			   --------------------------------------------------------- */
+			/* Main sharp project image */
 
 			.spotlight.left > .image.main,
 			.spotlight.right > .image.main {
@@ -108,9 +103,7 @@
 
 
 
-			/* ---------------------------------------------------------
-			   Keep complete project artwork visible
-			   --------------------------------------------------------- */
+			/* Show full project artwork */
 
 			.spotlight.left > .image.main > img,
 			.spotlight.right > .image.main > img {
@@ -136,7 +129,7 @@
 
 
 			/* =========================================================
-			   SOFT BLUR BEHIND THE SHARP PROJECT IMAGE
+			   BLURRED BACKGROUND
 			   ========================================================= */
 
 			.spotlight.left::after,
@@ -153,14 +146,14 @@
 
 				-webkit-backdrop-filter:
 					blur(10px)
-					brightness(0.80);
+					brightness(0.82);
 
 				backdrop-filter:
 					blur(10px)
-					brightness(0.80);
+					brightness(0.82);
 
 				background:
-					rgba(15, 16, 22, 0.16);
+					rgba(15, 16, 22, 0.15);
 
 				pointer-events: none;
 
@@ -169,7 +162,7 @@
 
 
 
-			/* Blur on image-right section */
+			/* Blur on image-right sections */
 
 			.spotlight.left::after {
 
@@ -179,7 +172,7 @@
 
 
 
-			/* Blur on image-left section */
+			/* Blur on image-left sections */
 
 			.spotlight.right::after {
 
@@ -189,9 +182,7 @@
 
 
 
-			/* =========================================================
-			   CONTENT ABOVE IMAGE/BACKGROUND
-			   ========================================================= */
+			/* Text must remain above image/background */
 
 			.spotlight.left > .content,
 			.spotlight.right > .content {
@@ -201,9 +192,7 @@
 
 
 
-			/* =========================================================
-			   ARROW ALWAYS ON TOP
-			   ========================================================= */
+			/* Arrow must remain clickable */
 
 			.spotlight.left > .goto-next,
 			.spotlight.right > .goto-next {
@@ -216,22 +205,22 @@
 
 
 		/* =========================================================
-		   SLIGHTLY SMOOTHER VISUAL MOTION
+		   SMALL VISUAL POLISH
 		   ========================================================= */
 
 		.spotlight > .content {
 
 			transition:
-				opacity 0.7s ease,
-				transform 0.7s ease;
+				opacity 0.65s ease,
+				transform 0.65s ease;
 		}
 
 
 		.goto-next {
 
 			transition:
-				opacity 0.3s ease,
-				transform 0.3s ease;
+				opacity 0.25s ease,
+				transform 0.25s ease;
 		}
 
 
@@ -279,11 +268,9 @@
 			<ul>
 
 				<li>
-
 					<a href="index.html">
 						Home
 					</a>
-
 				</li>
 
 			</ul>
@@ -349,7 +336,7 @@
 
 
 	<!-- =========================================================
-		 INTRO
+		 INTRODUCTION
 		 ========================================================= -->
 
 	<section
@@ -384,8 +371,7 @@
 
 							<p>
 								Build & design iOS application using swift5
-								with the combination of rxSwift binding
-								and fireBase
+								with the combination of rxSwift binding and fireBase
 							</p>
 
 						</header>
@@ -402,21 +388,13 @@
 
 						<ul>
 
-							<li>
-								Health & Fitness
-							</li>
+							<li>Health & Fitness</li>
 
-							<li>
-								Chat Based Applications
-							</li>
+							<li>Chat Based Applications</li>
 
-							<li>
-								Food Ordering
-							</li>
+							<li>Food Ordering</li>
 
-							<li>
-								Social Apps
-							</li>
+							<li>Social Apps</li>
 
 						</ul>
 
@@ -439,33 +417,19 @@
 
 						<ul>
 
-							<li>
-								Rest API's
-							</li>
+							<li>Rest API's</li>
 
-							<li>
-								CoreData, Realm & Sqlite
-							</li>
+							<li>CoreData, Realm & Sqlite</li>
 
-							<li>
-								ARKit, CoreML3 & Natural Language
-							</li>
+							<li>ARKit, CoreML3 & Natural Language</li>
 
-							<li>
-								3rd Party Integeration
-							</li>
+							<li>3rd Party Integeration</li>
 
-							<li>
-								TestFlight + CICD
-							</li>
+							<li>TestFlight + CICD</li>
 
-							<li>
-								Push Notifications + InAppCalling
-							</li>
+							<li>Push Notifications + InAppCalling</li>
 
-							<li>
-								Custom Animations & Custom UI
-							</li>
+							<li>Custom Animations & Custom UI</li>
 
 						</ul>
 
@@ -1457,11 +1421,9 @@
 				<div class="row gtr-uniform">
 
 
-					<section
-						class="col-4 col-6-medium col-12-xsmall">
+					<section class="col-4 col-6-medium col-12-xsmall">
 
-						<span
-							class="icon solid alt major fa-microchip">
+						<span class="icon solid alt major fa-microchip">
 						</span>
 
 						<h3>
@@ -1472,11 +1434,9 @@
 
 
 
-					<section
-						class="col-4 col-6-medium col-12-xsmall">
+					<section class="col-4 col-6-medium col-12-xsmall">
 
-						<span
-							class="icon major fa-solid fa-s">
+						<span class="icon major fa-solid fa-s">
 						</span>
 
 						<h3>
@@ -1487,11 +1447,9 @@
 
 
 
-					<section
-						class="col-4 col-6-medium col-12-xsmall">
+					<section class="col-4 col-6-medium col-12-xsmall">
 
-						<span
-							class="icon major fa-solid fa-p">
+						<span class="icon major fa-solid fa-p">
 						</span>
 
 						<h3>
@@ -1502,11 +1460,9 @@
 
 
 
-					<section
-						class="col-4 col-6-medium col-12-xsmall">
+					<section class="col-4 col-6-medium col-12-xsmall">
 
-						<span
-							class="icon major fa-sharp fa-solid fa-building">
+						<span class="icon major fa-sharp fa-solid fa-building">
 						</span>
 
 						<h3>
@@ -1517,11 +1473,9 @@
 
 
 
-					<section
-						class="col-4 col-6-medium col-12-xsmall">
+					<section class="col-4 col-6-medium col-12-xsmall">
 
-						<span
-							class="icon major fa-solid fa-file">
+						<span class="icon major fa-solid fa-file">
 						</span>
 
 						<h3>
@@ -1532,11 +1486,9 @@
 
 
 
-					<section
-						class="col-4 col-6-medium col-12-xsmall">
+					<section class="col-4 col-6-medium col-12-xsmall">
 
-						<span
-							class="icon solid alt major fa-comments-dollar">
+						<span class="icon solid alt major fa-comments-dollar">
 						</span>
 
 						<h3>
@@ -1622,7 +1574,7 @@
 
 
 <!-- =============================================================
-	 ORIGINAL THEME SCRIPTS
+	 ORIGINAL LANDED THEME SCRIPTS
 	 ============================================================= -->
 
 <script src="assets/js/jquery.min.js"></script>
@@ -1644,10 +1596,7 @@
 
 
 <!-- =============================================================
-	 RELIABLE SMOOTH PROJECT NAVIGATION
-
-	 We intentionally do NOT use the duplicated old #two/#three IDs.
-	 Each project now has its own unique ID.
+	 CUSTOM PREMIUM SMOOTH ARROW SCROLLING
 	 ============================================================= -->
 
 <script>
@@ -1656,25 +1605,102 @@
 		'DOMContentLoaded',
 		function () {
 
+
 			const links =
 				document.querySelectorAll(
 					'a.portfolio-scroll[href^="#"]'
 				);
 
 
+			let activeAnimation = null;
+
+
+			/* ---------------------------------------------------------
+			   Smooth premium ease-in / ease-out curve
+			   --------------------------------------------------------- */
+
+			function easeInOutCubic(progress) {
+
+				return progress < 0.5
+
+					? 4 *
+					  progress *
+					  progress *
+					  progress
+
+					: 1 -
+					  Math.pow(
+						  -2 * progress + 2,
+						  3
+					  ) / 2;
+
+			}
+
+
+
+			/* ---------------------------------------------------------
+			   Cancel animation if user manually scrolls
+			   --------------------------------------------------------- */
+
+			function cancelActiveScroll() {
+
+				if (activeAnimation !== null) {
+
+					cancelAnimationFrame(
+						activeAnimation
+					);
+
+					activeAnimation = null;
+
+				}
+
+			}
+
+
+			window.addEventListener(
+				'wheel',
+				cancelActiveScroll,
+				{ passive: true }
+			);
+
+
+			window.addEventListener(
+				'touchstart',
+				cancelActiveScroll,
+				{ passive: true }
+			);
+
+
+
+			/* ---------------------------------------------------------
+			   Arrow click handling
+			   --------------------------------------------------------- */
+
 			links.forEach(
 				function (link) {
+
 
 					link.addEventListener(
 						'click',
 						function (event) {
 
+
+							event.preventDefault();
+
+
+							cancelActiveScroll();
+
+
 							const selector =
-								this.getAttribute('href');
+								this.getAttribute(
+									'href'
+								);
 
 
 							const target =
-								document.querySelector(selector);
+								document.querySelector(
+									selector
+								);
 
 
 							if (!target) {
@@ -1682,31 +1708,145 @@
 							}
 
 
-							event.preventDefault();
+
+							const startY =
+								window.pageYOffset ||
+								document.documentElement.scrollTop;
 
 
-							const reduceMotion =
-								window.matchMedia(
-									'(prefers-reduced-motion: reduce)'
-								).matches;
+
+							/*
+								IMPORTANT:
+
+								No artificial header offset.
+
+								The next section itself is aligned
+								directly to the top of the viewport.
+
+								This prevents part of the previous
+								project remaining visible.
+							*/
+
+							const targetY =
+								target
+								.getBoundingClientRect()
+								.top
+								+
+								startY;
 
 
-							target.scrollIntoView({
 
-								behavior:
-									reduceMotion
-										? 'auto'
-										: 'smooth',
+							const distance =
+								targetY - startY;
 
-								block: 'start'
 
-							});
+
+							/*
+								950 milliseconds provides a smooth,
+								visible transition without feeling slow.
+							*/
+
+							const duration = 950;
+
+
+
+							let startTime = null;
+
+
+
+							function animateScroll(timestamp) {
+
+
+								if (startTime === null) {
+
+									startTime =
+										timestamp;
+
+								}
+
+
+								const elapsed =
+									timestamp -
+									startTime;
+
+
+								const progress =
+									Math.min(
+										elapsed /
+										duration,
+										1
+									);
+
+
+								const easedProgress =
+									easeInOutCubic(
+										progress
+									);
+
+
+
+								const currentY =
+									startY +
+									(
+										distance *
+										easedProgress
+									);
+
+
+
+								window.scrollTo(
+									0,
+									currentY
+								);
+
+
+
+								if (progress < 1) {
+
+
+									activeAnimation =
+										requestAnimationFrame(
+											animateScroll
+										);
+
+
+								}
+
+								else {
+
+
+									/*
+										Ensure exact final position.
+									*/
+
+									window.scrollTo(
+										0,
+										targetY
+									);
+
+
+									activeAnimation =
+										null;
+
+								}
+
+							}
+
+
+
+							activeAnimation =
+								requestAnimationFrame(
+									animateScroll
+								);
+
 
 						}
 					);
 
+
 				}
 			);
+
 
 		}
 	);
