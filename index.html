@@ -5,1602 +5,1715 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
-	<head>
-		<title>Khawaja Abdul Haleem</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
-		<link rel="stylesheet" href="assets/css/main.css" />
+<head>
 
-		<noscript>
-			<link rel="stylesheet" href="assets/css/noscript.css" />
-		</noscript>
+	<title>Khawaja Abdul Haleem</title>
 
-		<!--
-			Portfolio Project Image Improvements
+	<meta charset="utf-8" />
 
-			1. Shows the complete project image.
-			2. Keeps the original Landed theme background.
-			3. Adds a soft blur behind the main image.
-			4. Keeps the main project image sharp.
-			5. Keeps existing scrolling / spotlight animations.
-		-->
-		<style>
+	<meta
+		name="viewport"
+		content="width=device-width, initial-scale=1, user-scalable=no"
+	/>
 
-			@media screen and (min-width: 981px) {
+	<link
+		rel="stylesheet"
+		href="assets/css/main.css"
+	/>
 
-				/* =========================================================
-				   FULL SHARP PROJECT IMAGE
-				   ========================================================= */
-
-				.spotlight.left > .image.main,
-				.spotlight.right > .image.main {
-					display: block !important;
-
-					position: absolute;
-
-					top: 0;
-					bottom: 0;
-
-					height: 100%;
-
-					width: calc(100% - 28em);
-
-					margin: 0;
-
-					overflow: hidden;
-
-					border-radius: 0;
-
-					z-index: 2;
-
-					pointer-events: none;
-
-					background: transparent;
-				}
+	<noscript>
+		<link
+			rel="stylesheet"
+			href="assets/css/noscript.css"
+		/>
+	</noscript>
 
 
-				/* ---------------------------------------------------------
-				   Information LEFT
-				   Image RIGHT
-				   --------------------------------------------------------- */
+	<style>
 
-				.spotlight.left > .image.main {
-					left: auto;
-					right: 0;
-				}
+		/* =========================================================
+		   SMOOTH SCROLLING
+		   ========================================================= */
 
-
-				/* ---------------------------------------------------------
-				   Image LEFT
-				   Information RIGHT
-				   --------------------------------------------------------- */
-
-				.spotlight.right > .image.main {
-					left: 0;
-					right: auto;
-				}
+		html {
+			scroll-behavior: smooth;
+			scroll-padding-top: 3.5em;
+		}
 
 
-				/* ---------------------------------------------------------
-				   Keep complete project image visible
-				   --------------------------------------------------------- */
-
-				.spotlight.left > .image.main > img,
-				.spotlight.right > .image.main > img {
-
-					display: block !important;
-
-					position: absolute !important;
-
-					inset: 0;
-
-					width: 100% !important;
-					height: 100% !important;
-
-					margin: 0;
-
-					object-fit: contain;
-
-					object-position: center center;
-
-					z-index: 2;
-				}
+		section {
+			scroll-margin-top: 3.5em;
+		}
 
 
-				/* =========================================================
-				   BLURRED BACKGROUND BEHIND PROJECT IMAGE
-				   ========================================================= */
 
-				.spotlight.left::after,
-				.spotlight.right::after {
+		/* =========================================================
+		   FULL PROJECT IMAGES + BLURRED BACKGROUND
+		   ========================================================= */
 
-					content: '';
-
-					position: absolute;
-
-					top: 0;
-					bottom: 0;
-
-					width: calc(100% - 28em);
-
-					/*
-						Blur only whatever is behind this layer.
-						The actual project image remains sharp
-						because it sits above this layer.
-					*/
-
-					-webkit-backdrop-filter: blur(10px);
-					backdrop-filter: blur(10px);
-
-					/*
-						Slight dark tint so the background does
-						not compete with the sharp project image.
-					*/
-
-					background: rgba(15, 16, 22, 0.20);
-
-					pointer-events: none;
-
-					z-index: 1;
-				}
+		@media screen and (min-width: 981px) {
 
 
-				/* ---------------------------------------------------------
-				   Information LEFT -> blurred background RIGHT
-				   --------------------------------------------------------- */
+			/* ---------------------------------------------------------
+			   Main sharp project image
+			   --------------------------------------------------------- */
 
-				.spotlight.left::after {
-					left: auto;
-					right: 0;
-				}
+			.spotlight.left > .image.main,
+			.spotlight.right > .image.main {
 
+				display: block !important;
 
-				/* ---------------------------------------------------------
-				   Information RIGHT -> blurred background LEFT
-				   --------------------------------------------------------- */
+				position: absolute;
 
-				.spotlight.right::after {
-					left: 0;
-					right: auto;
-				}
+				top: 0;
+				bottom: 0;
 
+				height: 100%;
 
-				/* =========================================================
-				   TEXT PANEL
-				   ========================================================= */
+				width: calc(100% - 28em);
 
-				.spotlight.left > .content,
-				.spotlight.right > .content {
-					z-index: 4;
-				}
+				margin: 0;
 
+				overflow: hidden;
 
-				/* =========================================================
-				   DOWN ARROW
-				   ========================================================= */
+				border-radius: 0;
 
-				.spotlight.left > .goto-next,
-				.spotlight.right > .goto-next {
-					z-index: 5;
-				}
+				z-index: 2;
+
+				pointer-events: none;
+
+				background: transparent;
 			}
 
-		</style>
 
 
-		<script
-			src="https://kit.fontawesome.com/f184816c30.js"
-			crossorigin="anonymous">
-		</script>
+			/* Information LEFT -> Image RIGHT */
 
-	</head>
+			.spotlight.left > .image.main {
 
-
-	<body class="is-preload landing">
-
-		<div id="page-wrapper">
+				left: auto;
+				right: 0;
+			}
 
 
-			<!-- =========================================================
-				 HEADER
-				 ========================================================= -->
 
-			<header id="header">
+			/* Image LEFT -> Information RIGHT */
 
-				<h1 id="logo">
+			.spotlight.right > .image.main {
+
+				left: 0;
+				right: auto;
+			}
+
+
+
+			/* ---------------------------------------------------------
+			   Keep complete project artwork visible
+			   --------------------------------------------------------- */
+
+			.spotlight.left > .image.main > img,
+			.spotlight.right > .image.main > img {
+
+				display: block !important;
+
+				position: absolute !important;
+
+				inset: 0;
+
+				width: 100% !important;
+				height: 100% !important;
+
+				margin: 0;
+
+				object-fit: contain;
+
+				object-position: center center;
+
+				z-index: 2;
+			}
+
+
+
+			/* =========================================================
+			   SOFT BLUR BEHIND THE SHARP PROJECT IMAGE
+			   ========================================================= */
+
+			.spotlight.left::after,
+			.spotlight.right::after {
+
+				content: '';
+
+				position: absolute;
+
+				top: 0;
+				bottom: 0;
+
+				width: calc(100% - 28em);
+
+				-webkit-backdrop-filter:
+					blur(10px)
+					brightness(0.80);
+
+				backdrop-filter:
+					blur(10px)
+					brightness(0.80);
+
+				background:
+					rgba(15, 16, 22, 0.16);
+
+				pointer-events: none;
+
+				z-index: 1;
+			}
+
+
+
+			/* Blur on image-right section */
+
+			.spotlight.left::after {
+
+				left: auto;
+				right: 0;
+			}
+
+
+
+			/* Blur on image-left section */
+
+			.spotlight.right::after {
+
+				left: 0;
+				right: auto;
+			}
+
+
+
+			/* =========================================================
+			   CONTENT ABOVE IMAGE/BACKGROUND
+			   ========================================================= */
+
+			.spotlight.left > .content,
+			.spotlight.right > .content {
+
+				z-index: 4;
+			}
+
+
+
+			/* =========================================================
+			   ARROW ALWAYS ON TOP
+			   ========================================================= */
+
+			.spotlight.left > .goto-next,
+			.spotlight.right > .goto-next {
+
+				z-index: 5;
+			}
+
+		}
+
+
+
+		/* =========================================================
+		   SLIGHTLY SMOOTHER VISUAL MOTION
+		   ========================================================= */
+
+		.spotlight > .content {
+
+			transition:
+				opacity 0.7s ease,
+				transform 0.7s ease;
+		}
+
+
+		.goto-next {
+
+			transition:
+				opacity 0.3s ease,
+				transform 0.3s ease;
+		}
+
+
+		.goto-next:hover {
+
+			transform: translateY(5px);
+		}
+
+	</style>
+
+
+
+	<script
+		src="https://kit.fontawesome.com/f184816c30.js"
+		crossorigin="anonymous">
+	</script>
+
+</head>
+
+
+
+<body class="is-preload landing">
+
+<div id="page-wrapper">
+
+
+
+	<!-- =========================================================
+		 HEADER
+		 ========================================================= -->
+
+	<header id="header">
+
+		<h1 id="logo">
+
+			<a href="index.html">
+				@Khawaja-Abdul-Haleem
+			</a>
+
+		</h1>
+
+
+		<nav id="nav">
+
+			<ul>
+
+				<li>
+
 					<a href="index.html">
-						@Khawaja-Abdul-Haleem
+						Home
 					</a>
-				</h1>
 
-				<nav id="nav">
+				</li>
 
-					<ul>
+			</ul>
 
-						<li>
-							<a href="index.html">
-								Home
-							</a>
-						</li>
+		</nav>
 
-					</ul>
+	</header>
 
-				</nav>
+
+
+	<!-- =========================================================
+		 BANNER
+		 ========================================================= -->
+
+	<section id="banner">
+
+		<div class="content">
+
+			<header>
+
+				<center>
+
+					<h2>
+						Khawaja Abdul Haleem
+					</h2>
+
+					<p>
+						Everyone write code that computer can understand,
+						so we write code that human can understand.
+					</p>
+
+				</center>
 
 			</header>
 
 
+			<center>
 
-			<!-- =========================================================
-				 BANNER
-				 ========================================================= -->
-
-			<section id="banner">
-
-				<div class="content">
-
-					<header>
-
-						<center>
-
-							<h2>
-								Khawaja Abdul Haleem
-							</h2>
-
-							<p>
-								Everyone write code that computer can understand,
-								so we write code that human can understand.
-							</p>
-
-						</center>
-
-					</header>
-
-
-					<center>
-
-						<span class="image">
-
-							<img
-								src="images/profile_kah.jpeg"
-								alt=""
-							/>
-
-						</span>
-
-					</center>
-
-				</div>
-
-
-				<a
-					href="#one"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 INTRODUCTION
-				 ========================================================= -->
-
-			<section
-				id="one"
-				class="spotlight style1 bottom">
-
-
-				<span class="image fit main">
+				<span class="image">
 
 					<img
-						src="images/businessCOver.jpg"
+						src="images/profile_kah.jpeg"
 						alt=""
 					/>
 
 				</span>
 
-
-				<div class="content">
-
-					<div class="container">
-
-						<div class="row">
-
-
-							<div class="col-4 col-12-medium">
-
-								<header>
-
-									<h2>
-										Native iOS Developer
-									</h2>
-
-									<p>
-										Build & design iOS application using swift5
-										with the combination of rxSwift binding and fireBase
-									</p>
-
-								</header>
-
-							</div>
-
-
-
-							<div class="col-4 col-12-medium">
-
-								<p>
-									I will build the native iOS apps like
-								</p>
-
-								<ul>
-
-									<li>
-										Health & Fitness
-									</li>
-
-									<li>
-										Chat Based Applications
-									</li>
-
-									<li>
-										Food Ordering
-									</li>
-
-									<li>
-										Social Apps
-									</li>
-
-								</ul>
-
-
-								<p>
-									All applications are responsive and also including
-									social media integeration
-									(Google, Facebook, Twitter etc)
-								</p>
-
-							</div>
-
-
-
-							<div class="col-4 col-12-medium">
-
-								<p>
-									Using Swift5
-								</p>
-
-								<ul>
-
-									<li>
-										Rest API's
-									</li>
-
-									<li>
-										CoreData, Realm & Sqlite
-									</li>
-
-									<li>
-										ARKit, CoreML3 & Natural Language
-									</li>
-
-									<li>
-										3rd Party Integeration
-									</li>
-
-									<li>
-										TestFlight + CICD
-									</li>
-
-									<li>
-										Push Notifications + InAppCalling
-									</li>
-
-									<li>
-										Custom Animations & Custom UI
-									</li>
-
-								</ul>
-
-							</div>
-
-
-						</div>
-
-					</div>
-
-				</div>
-
-
-				<a
-					href="#two"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 URWAY
-				 ========================================================= -->
-
-			<section
-				id="three"
-				class="spotlight style3 left">
-
-
-				<span class="image fit main bottom">
-
-					<img
-						src="images/URWayCombine.png"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							URWAY
-						</h2>
-
-						<p>
-							A premium driving and navigation app
-							with custom route creation, rerouting,
-							club-based drives, events,
-							and rally or solo navigation.
-						</p>
-
-					</header>
-
-
-					<p>
-						Developed custom navigation flows,
-						club memberships,
-						Stripe and In-App Purchases,
-						event scheduling,
-						WebSocket-based navigation,
-						and real-time club social features.
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#four"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 AGTRINSIC
-				 ========================================================= -->
-
-			<section
-				id="two"
-				class="spotlight style2 right">
-
-
-				<span class="image fit main">
-
-					<img
-						src="images/combineAgtrinsic.png"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							Agtrinsic
-						</h2>
-
-						<p>
-							An agritech application designed
-							to help farmers understand crop
-							and field conditions through map-based
-							management and AI-powered analysis.
-						</p>
-
-					</header>
-
-
-					<p>
-						Implemented crop creation,
-						field-area selection,
-						CRUD workflows,
-						and LLM-powered analysis for crop health,
-						disease guidance,
-						trait analysis,
-						and yield prediction.
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#three"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 SALON MANAGEMENT
-				 ========================================================= -->
-
-			<section
-				id="three"
-				class="spotlight style3 left">
-
-
-				<span class="image fit main bottom">
-
-					<img
-						src="images/salonCombine.png"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							SalonManagement
-						</h2>
-
-						<p>
-							A salon management application
-							for technician attendance,
-							scheduling,
-							and service assignment
-							through an intuitive workflow.
-						</p>
-
-					</header>
-
-
-					<p>
-						Implemented manager-driven
-						15-slot technician scheduling,
-						drag-and-drop service assignment,
-						appointment and service statuses,
-						plus subscription flows using
-						Stripe and In-App Purchases.
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#four"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 SMART PARKING
-				 ========================================================= -->
-
-			<section
-				id="two"
-				class="spotlight style2 right">
-
-
-				<span class="image fit main">
-
-					<img
-						src="images/sp.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							SmartParking
-						</h2>
-
-						<p>
-							With SP, you can book a slot for park your car.
-							This app will check available slot and booked.
-							It also pay after you check out from parking
-							and change status of your reserved parking
-							to available
-						</p>
-
-					</header>
-
-
-					<p>
-						SmartParking provide a feature to add
-						your multiple vehicle and also can
-						maintain history of your payment
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#three"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 SARTRE
-				 ========================================================= -->
-
-			<section
-				id="three"
-				class="spotlight style3 left">
-
-
-				<span class="image fit main bottom">
-
-					<img
-						src="images/sartre.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							Sartre
-						</h2>
-
-						<p>
-							A ToDo App to track the tasks
-							and provide attractive UI
-						</p>
-
-					</header>
-
-
-					<p>
-						Can store assignment,
-						fun,
-						projects,
-						multiple tasks.
-						User can mark them as pending,
-						completed,
-						ongoing etc
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#four"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 GUARDIAN
-				 ========================================================= -->
-
-			<section
-				id="two"
-				class="spotlight style2 right">
-
-
-				<span class="image fit main">
-
-					<img
-						src="images/guardian.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							Guardian
-						</h2>
-
-						<p>
-							Track Students Live location,
-							also maintain history and create
-							their Playback to see where they go.
-							From This app you can make geoZone
-							with CRUD operation.
-						</p>
-
-					</header>
-
-
-					<p>
-						For Security Purpose.
-						Live data will be fetched
-						and also up-to-date you
-						by push notification
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#three"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 SL DASHBOARD
-				 ========================================================= -->
-
-			<section
-				id="three"
-				class="spotlight style3 left">
-
-
-				<span class="image fit main bottom">
-
-					<img
-						src="images/sldashboard.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							SL Dashboard
-						</h2>
-
-						<p>
-							In SL Dashboard,
-							we have a dashboard which contain
-							record of Multiple Tasks
-							and can monitor using graph View.
-						</p>
-
-					</header>
-
-
-					<p>
-						It is in multilingual English & Arabic,
-						also can monitor literacry
-						and employement rate
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#four"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 GREENBEE
-				 ========================================================= -->
-
-			<section
-				id="two"
-				class="spotlight style2 right">
-
-
-				<span class="image fit main">
-
-					<img
-						src="images/greenBee.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							GreenBee
-						</h2>
-
-						<p>
-							With GreenBee,
-							you can carry the power of Solar
-							in your pocket.
-							With the use of a single app,
-							this solar app can provide feature
-							of status checking of live device,
-							also can power Off/On by singe tap.
-						</p>
-
-					</header>
-
-
-					<p>
-						Also check live Packet using graphs
-						(Monthly, weekly, daily).
-						Live data will be fetched
-						and also up-to-date you
-						by push notification
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#three"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 SMART BUILDING
-				 ========================================================= -->
-
-			<section
-				id="three"
-				class="spotlight style3 left">
-
-
-				<span class="image fit main bottom">
-
-					<img
-						src="images/smartBuilding.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							SmartBuilding
-						</h2>
-
-						<p>
-							An end-to-end solution designed
-							to integrate multiple functions,
-							such as surveillance cameras,
-							intelligent controls,
-							energy consumption monitoring,
-							alarm detection,
-							and lighting control,
-							into a single platform,
-							enabling users to create
-							a dynamic and interconnected
-							smart building environment.
-						</p>
-
-					</header>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#four"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 GOHYPER
-				 ========================================================= -->
-
-			<section
-				id="two"
-				class="spotlight style2 right">
-
-
-				<span class="image fit main">
-
-					<img
-						src="images/goHyoer.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							GoHyper
-						</h2>
-
-						<p>
-							With GoHyper,
-							you can carry the power of fleet
-							management software in your pocket.
-
-							With the use of a single app,
-							fleet managers,
-							drivers,
-							technicians,
-							and other staff members
-							may work together on crucial
-							fleet maintenance chores.
-
-							GoHyper helps teams stay ahead
-							of the daily needs of their fleet
-							cars and equipment since it is
-							quick and productivity-optimized.
-						</p>
-
-					</header>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#three"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 FLEETOPS
-				 ========================================================= -->
-
-			<section
-				id="three"
-				class="spotlight style3 left">
-
-
-				<span class="image fit main bottom">
-
-					<img
-						src="images/FleetOps.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							FleetOps
-						</h2>
-
-						<p>
-							Fleet managers,
-							drivers,
-							technicians,
-							and other fleet personnel
-							can collaborate on critical
-							fleet assignments,
-							jobs,
-							maintenance tasks,
-							real-time tracking,
-							playback,
-							and manage everything from reports
-							to functions in a single app.
-						</p>
-
-					</header>
-
-
-					<p>
-						Fleets can operate like well-oiled machines
-						and manage everyday fleet duties with FleetOps.
-
-						Vehicle data,
-						including GPS tracking
-						and location information,
-						is safely kept on FleetOps servers.
-
-						With their login information,
-						administrators of the FleetOps
-						can manage numerous fleets
-						and track data.
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#four"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 TENNIS FIGHTS
-				 ========================================================= -->
-
-			<section
-				id="two"
-				class="spotlight style2 right">
-
-
-				<span class="image fit main">
-
-					<img
-						src="images/TennisFight.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							Tennis Fights
-						</h2>
-
-						<p>
-							The Tennis Fights software
-							is designed for Tennis enthusiasts.
-
-							It is a place where Tennis players
-							from all over the world can sign up
-							for the application and schedule
-							tennis matches with other Tennis players
-							in their respective regions and cities.
-
-							This platform is also built
-							for business purposes
-							in terms of revenue generation
-							and to build the community
-							of Tennis players.
-						</p>
-
-					</header>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#three"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 SHARIF LABS
-				 ========================================================= -->
-
-			<section
-				id="three"
-				class="spotlight style3 left">
-
-
-				<span class="image fit main bottom">
-
-					<img
-						src="images/SharifLabs.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							SharifLabs and Diagnostics
-						</h2>
-
-						<p>
-							Offers services in areas of
-							Hematology,
-							Endocrinology,
-							Clinical Pathology,
-							Microbiology,
-							Molecular Biology
-							and Histopathology
-							with its state-of-the-art technology.
-						</p>
-
-					</header>
-
-
-					<p>
-						Users can register themselves
-						for appointment and also generate
-						their test reports by
-						CNIC / Passport No / TrackingID.
-					</p>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#four"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 AGHAAZ
-				 ========================================================= -->
-
-			<section
-				id="two"
-				class="spotlight style2 right">
-
-
-				<span class="image fit main">
-
-					<img
-						src="images/Aghaaz.jpg"
-						alt=""
-					/>
-
-				</span>
-
-
-				<div class="content">
-
-					<header>
-
-						<h2>
-							Aghaaz - A web portal
-						</h2>
-
-						<p>
-							Aims to provide young people,
-							who are about to get married
-							or are recently married,
-							complete access to comprehensive
-							sexual and reproductive health
-							(SRH) information.
-
-							Aghaaz envisages a Pakistan
-							where all young people have
-							the information and resources available
-							that are required for a long,
-							healthy,
-							stable and satisfying marriage.
-						</p>
-
-					</header>
-
-
-					<ul class="actions">
-					</ul>
-
-				</div>
-
-
-				<a
-					href="#three"
-					class="goto-next scrolly">
-
-					Next
-
-				</a>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 WHY ME
-				 ========================================================= -->
-
-			<section
-				id="four"
-				class="wrapper style1 special fade-up">
-
-
-				<div class="container">
-
-
-					<header class="major">
-
-						<h2>
-							WHY Me ?
-						</h2>
-
-						<p>
-							Strong Technical Skills |
-							Long-term Relationship |
-							99.99 % client Satisfaction
-						</p>
-
-						<p>
-							UI / UX Design |
-							JIRA |
-							Figma
-						</p>
-
-					</header>
-
-
-					<h2>
-						Other Professional Skills
-					</h2>
-
-
-					<div class="box alt">
-
-						<div class="row gtr-uniform">
-
-
-							<section
-								class="col-4 col-6-medium col-12-xsmall">
-
-								<span
-									class="icon solid alt major fa-microchip">
-								</span>
-
-								<h3>
-									Artifical Intelligence
-								</h3>
-
-								<p>
-								</p>
-
-							</section>
-
-
-
-							<section
-								class="col-4 col-6-medium col-12-xsmall">
-
-								<span
-									class="icon major fa-solid fa-s">
-								</span>
-
-								<h3>
-									Web Scraping
-								</h3>
-
-								<p>
-								</p>
-
-							</section>
-
-
-
-							<section
-								class="col-4 col-6-medium col-12-xsmall">
-
-								<span
-									class="icon major fa-solid fa-p">
-								</span>
-
-								<h3>
-									Photoshop
-								</h3>
-
-							</section>
-
-
-
-							<section
-								class="col-4 col-6-medium col-12-xsmall">
-
-								<span
-									class="icon major fa-sharp fa-solid fa-building">
-								</span>
-
-								<h3>
-									AutoCad 2D / 3D
-								</h3>
-
-								<p>
-								</p>
-
-							</section>
-
-
-
-							<section
-								class="col-4 col-6-medium col-12-xsmall">
-
-								<span
-									class="icon major fa-solid fa-file">
-								</span>
-
-								<h3>
-									SEO
-								</h3>
-
-								<p>
-								</p>
-
-							</section>
-
-
-
-							<section
-								class="col-4 col-6-medium col-12-xsmall">
-
-								<span
-									class="icon solid alt major fa-comments-dollar">
-								</span>
-
-								<h3>
-									FreeLancing
-								</h3>
-
-								<p>
-								</p>
-
-							</section>
-
-
-						</div>
-
-					</div>
-
-
-					<footer class="major">
-
-						<ul class="actions special">
-						</ul>
-
-					</footer>
-
-
-				</div>
-
-			</section>
-
-
-
-			<!-- =========================================================
-				 FOOTER
-				 ========================================================= -->
-
-			<footer id="footer">
-
-
-				<ul class="icons">
-
-
-					<li>
-
-						<a
-							href="https://pk.linkedin.com/in/khawaja-abdul-haleem-8972591a1"
-							class="icon brands alt fa-linkedin-in">
-
-							<span class="label">
-								LinkedIn
-							</span>
-
-						</a>
-
-					</li>
-
-
-
-					<li>
-
-						<a
-							href="https://github.com/Khawaja-Abdul-Haleem"
-							class="icon brands alt fa-github">
-
-							<span class="label">
-								GitHub
-							</span>
-
-						</a>
-
-					</li>
-
-
-				</ul>
-
-
-				<ul class="copyright">
-
-					<p>
-						EMAIL | haleemabdul194@gmail.com
-					</p>
-
-					<p>
-						Thank You
-					</p>
-
-				</ul>
-
-
-			</footer>
-
+			</center>
 
 		</div>
 
 
+		<a
+			href="#intro"
+			class="goto-next portfolio-scroll">
 
-		<!-- =============================================================
-			 SCRIPTS
-			 DO NOT REMOVE - these preserve your animations
-			 ============================================================= -->
+			Next
 
-		<script src="assets/js/jquery.min.js"></script>
+		</a>
 
-		<script src="assets/js/jquery.scrolly.min.js"></script>
-
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-
-		<script src="assets/js/jquery.scrollex.min.js"></script>
-
-		<script src="assets/js/browser.min.js"></script>
-
-		<script src="assets/js/breakpoints.min.js"></script>
-
-		<script src="assets/js/util.js"></script>
-
-		<script src="assets/js/main.js"></script>
+	</section>
 
 
-	</body>
+
+	<!-- =========================================================
+		 INTRO
+		 ========================================================= -->
+
+	<section
+		id="intro"
+		class="spotlight style1 bottom">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/businessCOver.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<div class="container">
+
+				<div class="row">
+
+
+					<div class="col-4 col-12-medium">
+
+						<header>
+
+							<h2>
+								Native iOS Developer
+							</h2>
+
+							<p>
+								Build & design iOS application using swift5
+								with the combination of rxSwift binding
+								and fireBase
+							</p>
+
+						</header>
+
+					</div>
+
+
+
+					<div class="col-4 col-12-medium">
+
+						<p>
+							I will build the native iOS apps like
+						</p>
+
+						<ul>
+
+							<li>
+								Health & Fitness
+							</li>
+
+							<li>
+								Chat Based Applications
+							</li>
+
+							<li>
+								Food Ordering
+							</li>
+
+							<li>
+								Social Apps
+							</li>
+
+						</ul>
+
+
+						<p>
+							All applications are responsive and also including
+							social media integeration
+							(Google, Facebook, Twitter etc)
+						</p>
+
+					</div>
+
+
+
+					<div class="col-4 col-12-medium">
+
+						<p>
+							Using Swift5
+						</p>
+
+						<ul>
+
+							<li>
+								Rest API's
+							</li>
+
+							<li>
+								CoreData, Realm & Sqlite
+							</li>
+
+							<li>
+								ARKit, CoreML3 & Natural Language
+							</li>
+
+							<li>
+								3rd Party Integeration
+							</li>
+
+							<li>
+								TestFlight + CICD
+							</li>
+
+							<li>
+								Push Notifications + InAppCalling
+							</li>
+
+							<li>
+								Custom Animations & Custom UI
+							</li>
+
+						</ul>
+
+					</div>
+
+
+				</div>
+
+			</div>
+
+		</div>
+
+
+		<a
+			href="#urway"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 URWAY
+		 ========================================================= -->
+
+	<section
+		id="urway"
+		class="spotlight style3 left">
+
+
+		<span class="image fit main bottom">
+
+			<img
+				src="images/URWayCombine.png"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					URWAY
+				</h2>
+
+				<p>
+					A premium driving and navigation app
+					with custom route creation,
+					rerouting,
+					club-based drives,
+					events,
+					and rally or solo navigation.
+				</p>
+
+			</header>
+
+
+			<p>
+				Developed custom navigation flows,
+				club memberships,
+				Stripe and In-App Purchases,
+				event scheduling,
+				WebSocket-based navigation,
+				and real-time club social features.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#agtrinsic"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 AGTRINSIC
+		 ========================================================= -->
+
+	<section
+		id="agtrinsic"
+		class="spotlight style2 right">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/combineAgtrinsic.png"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					Agtrinsic
+				</h2>
+
+				<p>
+					An agritech application designed
+					to help farmers understand crop
+					and field conditions through map-based
+					management and AI-powered analysis.
+				</p>
+
+			</header>
+
+
+			<p>
+				Implemented crop creation,
+				field-area selection,
+				CRUD workflows,
+				and LLM-powered analysis for crop health,
+				disease guidance,
+				trait analysis,
+				and yield prediction.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#salon"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 SALON MANAGEMENT
+		 ========================================================= -->
+
+	<section
+		id="salon"
+		class="spotlight style3 left">
+
+
+		<span class="image fit main bottom">
+
+			<img
+				src="images/salonCombine.png"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					SalonManagement
+				</h2>
+
+				<p>
+					A salon management application
+					for technician attendance,
+					scheduling,
+					and service assignment
+					through an intuitive workflow.
+				</p>
+
+			</header>
+
+
+			<p>
+				Implemented manager-driven
+				15-slot technician scheduling,
+				drag-and-drop service assignment,
+				appointment and service statuses,
+				plus subscription flows using
+				Stripe and In-App Purchases.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#smartparking"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 SMART PARKING
+		 ========================================================= -->
+
+	<section
+		id="smartparking"
+		class="spotlight style2 right">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/sp.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					SmartParking
+				</h2>
+
+				<p>
+					With SP, you can book a slot for park your car.
+					This app will check available slot and booked.
+					It also pay after you check out from parking
+					and change status of your reserved parking
+					to available.
+				</p>
+
+			</header>
+
+
+			<p>
+				SmartParking provide a feature to add
+				your multiple vehicle and also can
+				maintain history of your payment.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#sartre"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 SARTRE
+		 ========================================================= -->
+
+	<section
+		id="sartre"
+		class="spotlight style3 left">
+
+
+		<span class="image fit main bottom">
+
+			<img
+				src="images/sartre.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					Sartre
+				</h2>
+
+				<p>
+					A ToDo App to track the tasks
+					and provide attractive UI.
+				</p>
+
+			</header>
+
+
+			<p>
+				Can store assignment,
+				fun,
+				projects,
+				multiple tasks.
+				User can mark them as pending,
+				completed,
+				ongoing etc.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#guardian"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 GUARDIAN
+		 ========================================================= -->
+
+	<section
+		id="guardian"
+		class="spotlight style2 right">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/guardian.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					Guardian
+				</h2>
+
+				<p>
+					Track Students Live location,
+					also maintain history and create
+					their Playback to see where they go.
+					From This app you can make geoZone
+					with CRUD operation.
+				</p>
+
+			</header>
+
+
+			<p>
+				For Security Purpose.
+				Live data will be fetched
+				and also up-to-date you
+				by push notification.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#sl-dashboard"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 SL DASHBOARD
+		 ========================================================= -->
+
+	<section
+		id="sl-dashboard"
+		class="spotlight style3 left">
+
+
+		<span class="image fit main bottom">
+
+			<img
+				src="images/sldashboard.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					SL Dashboard
+				</h2>
+
+				<p>
+					In SL Dashboard,
+					we have a dashboard which contain
+					record of Multiple Tasks
+					and can monitor using graph View.
+				</p>
+
+			</header>
+
+
+			<p>
+				It is in multilingual English & Arabic,
+				also can monitor literacry
+				and employement rate.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#greenbee"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 GREENBEE
+		 ========================================================= -->
+
+	<section
+		id="greenbee"
+		class="spotlight style2 right">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/greenBee.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					GreenBee
+				</h2>
+
+				<p>
+					With GreenBee,
+					you can carry the power of Solar
+					in your pocket.
+					With the use of a single app,
+					this solar app can provide feature
+					of status checking of live device,
+					also can power Off/On by singe tap.
+				</p>
+
+			</header>
+
+
+			<p>
+				Also check live Packet using graphs
+				(Monthly, weekly, daily).
+				Live data will be fetched
+				and also up-to-date you
+				by push notification.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#smartbuilding"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 SMART BUILDING
+		 ========================================================= -->
+
+	<section
+		id="smartbuilding"
+		class="spotlight style3 left">
+
+
+		<span class="image fit main bottom">
+
+			<img
+				src="images/smartBuilding.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					SmartBuilding
+				</h2>
+
+				<p>
+					An end-to-end solution designed
+					to integrate multiple functions,
+					such as surveillance cameras,
+					intelligent controls,
+					energy consumption monitoring,
+					alarm detection,
+					and lighting control,
+					into a single platform,
+					enabling users to create
+					a dynamic and interconnected
+					smart building environment.
+				</p>
+
+			</header>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#gohyper"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 GOHYPER
+		 ========================================================= -->
+
+	<section
+		id="gohyper"
+		class="spotlight style2 right">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/goHyoer.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					GoHyper
+				</h2>
+
+				<p>
+					With GoHyper,
+					you can carry the power of fleet
+					management software in your pocket.
+
+					With the use of a single app,
+					fleet managers,
+					drivers,
+					technicians,
+					and other staff members
+					may work together on crucial
+					fleet maintenance chores.
+
+					GoHyper helps teams stay ahead
+					of the daily needs of their fleet
+					cars and equipment since it is
+					quick and productivity-optimized.
+				</p>
+
+			</header>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#fleetops"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 FLEETOPS
+		 ========================================================= -->
+
+	<section
+		id="fleetops"
+		class="spotlight style3 left">
+
+
+		<span class="image fit main bottom">
+
+			<img
+				src="images/FleetOps.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					FleetOps
+				</h2>
+
+				<p>
+					Fleet managers,
+					drivers,
+					technicians,
+					and other fleet personnel
+					can collaborate on critical
+					fleet assignments,
+					jobs,
+					maintenance tasks,
+					real-time tracking,
+					playback,
+					and manage everything from reports
+					to functions in a single app.
+				</p>
+
+			</header>
+
+
+			<p>
+				Fleets can operate like well-oiled machines
+				and manage everyday fleet duties with FleetOps.
+
+				Vehicle data,
+				including GPS tracking
+				and location information,
+				is safely kept on FleetOps servers.
+
+				With their login information,
+				administrators of the FleetOps
+				can manage numerous fleets
+				and track data.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#tennis-fights"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 TENNIS FIGHTS
+		 ========================================================= -->
+
+	<section
+		id="tennis-fights"
+		class="spotlight style2 right">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/TennisFight.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					Tennis Fights
+				</h2>
+
+				<p>
+					The Tennis Fights software
+					is designed for Tennis enthusiasts.
+
+					It is a place where Tennis players
+					from all over the world can sign up
+					for the application and schedule
+					tennis matches with other Tennis players
+					in their respective regions and cities.
+
+					This platform is also built
+					for business purposes
+					in terms of revenue generation
+					and to build the community
+					of Tennis players.
+				</p>
+
+			</header>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#shariflabs"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 SHARIF LABS
+		 ========================================================= -->
+
+	<section
+		id="shariflabs"
+		class="spotlight style3 left">
+
+
+		<span class="image fit main bottom">
+
+			<img
+				src="images/SharifLabs.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					SharifLabs and Diagnostics
+				</h2>
+
+				<p>
+					Offers services in areas of
+					Hematology,
+					Endocrinology,
+					Clinical Pathology,
+					Microbiology,
+					Molecular Biology
+					and Histopathology
+					with its state-of-the-art technology.
+				</p>
+
+			</header>
+
+
+			<p>
+				Users can register themselves
+				for appointment and also generate
+				their test reports by
+				CNIC / Passport No / TrackingID.
+			</p>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#aghaaz"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 AGHAAZ
+		 ========================================================= -->
+
+	<section
+		id="aghaaz"
+		class="spotlight style2 right">
+
+
+		<span class="image fit main">
+
+			<img
+				src="images/Aghaaz.jpg"
+				alt=""
+			/>
+
+		</span>
+
+
+		<div class="content">
+
+			<header>
+
+				<h2>
+					Aghaaz - A web portal
+				</h2>
+
+				<p>
+					Aims to provide young people,
+					who are about to get married
+					or are recently married,
+					complete access to comprehensive
+					sexual and reproductive health
+					(SRH) information.
+
+					Aghaaz envisages a Pakistan
+					where all young people have
+					the information and resources available
+					that are required for a long,
+					healthy,
+					stable and satisfying marriage.
+				</p>
+
+			</header>
+
+
+			<ul class="actions">
+			</ul>
+
+		</div>
+
+
+		<a
+			href="#skills"
+			class="goto-next portfolio-scroll">
+
+			Next
+
+		</a>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 WHY ME / SKILLS
+		 ========================================================= -->
+
+	<section
+		id="skills"
+		class="wrapper style1 special fade-up">
+
+
+		<div class="container">
+
+
+			<header class="major">
+
+				<h2>
+					WHY Me ?
+				</h2>
+
+				<p>
+					Strong Technical Skills |
+					Long-term Relationship |
+					99.99 % client Satisfaction
+				</p>
+
+				<p>
+					UI / UX Design |
+					JIRA |
+					Figma
+				</p>
+
+			</header>
+
+
+			<h2>
+				Other Professional Skills
+			</h2>
+
+
+			<div class="box alt">
+
+				<div class="row gtr-uniform">
+
+
+					<section
+						class="col-4 col-6-medium col-12-xsmall">
+
+						<span
+							class="icon solid alt major fa-microchip">
+						</span>
+
+						<h3>
+							Artifical Intelligence
+						</h3>
+
+					</section>
+
+
+
+					<section
+						class="col-4 col-6-medium col-12-xsmall">
+
+						<span
+							class="icon major fa-solid fa-s">
+						</span>
+
+						<h3>
+							Web Scraping
+						</h3>
+
+					</section>
+
+
+
+					<section
+						class="col-4 col-6-medium col-12-xsmall">
+
+						<span
+							class="icon major fa-solid fa-p">
+						</span>
+
+						<h3>
+							Photoshop
+						</h3>
+
+					</section>
+
+
+
+					<section
+						class="col-4 col-6-medium col-12-xsmall">
+
+						<span
+							class="icon major fa-sharp fa-solid fa-building">
+						</span>
+
+						<h3>
+							AutoCad 2D / 3D
+						</h3>
+
+					</section>
+
+
+
+					<section
+						class="col-4 col-6-medium col-12-xsmall">
+
+						<span
+							class="icon major fa-solid fa-file">
+						</span>
+
+						<h3>
+							SEO
+						</h3>
+
+					</section>
+
+
+
+					<section
+						class="col-4 col-6-medium col-12-xsmall">
+
+						<span
+							class="icon solid alt major fa-comments-dollar">
+						</span>
+
+						<h3>
+							FreeLancing
+						</h3>
+
+					</section>
+
+
+				</div>
+
+			</div>
+
+
+		</div>
+
+	</section>
+
+
+
+	<!-- =========================================================
+		 FOOTER
+		 ========================================================= -->
+
+	<footer id="footer">
+
+
+		<ul class="icons">
+
+
+			<li>
+
+				<a
+					href="https://pk.linkedin.com/in/khawaja-abdul-haleem-8972591a1"
+					class="icon brands alt fa-linkedin-in">
+
+					<span class="label">
+						LinkedIn
+					</span>
+
+				</a>
+
+			</li>
+
+
+
+			<li>
+
+				<a
+					href="https://github.com/Khawaja-Abdul-Haleem"
+					class="icon brands alt fa-github">
+
+					<span class="label">
+						GitHub
+					</span>
+
+				</a>
+
+			</li>
+
+
+		</ul>
+
+
+		<ul class="copyright">
+
+			<p>
+				EMAIL | haleemabdul194@gmail.com
+			</p>
+
+			<p>
+				Thank You
+			</p>
+
+		</ul>
+
+
+	</footer>
+
+
+</div>
+
+
+
+<!-- =============================================================
+	 ORIGINAL THEME SCRIPTS
+	 ============================================================= -->
+
+<script src="assets/js/jquery.min.js"></script>
+
+<script src="assets/js/jquery.scrolly.min.js"></script>
+
+<script src="assets/js/jquery.dropotron.min.js"></script>
+
+<script src="assets/js/jquery.scrollex.min.js"></script>
+
+<script src="assets/js/browser.min.js"></script>
+
+<script src="assets/js/breakpoints.min.js"></script>
+
+<script src="assets/js/util.js"></script>
+
+<script src="assets/js/main.js"></script>
+
+
+
+<!-- =============================================================
+	 RELIABLE SMOOTH PROJECT NAVIGATION
+
+	 We intentionally do NOT use the duplicated old #two/#three IDs.
+	 Each project now has its own unique ID.
+	 ============================================================= -->
+
+<script>
+
+	document.addEventListener(
+		'DOMContentLoaded',
+		function () {
+
+			const links =
+				document.querySelectorAll(
+					'a.portfolio-scroll[href^="#"]'
+				);
+
+
+			links.forEach(
+				function (link) {
+
+					link.addEventListener(
+						'click',
+						function (event) {
+
+							const selector =
+								this.getAttribute('href');
+
+
+							const target =
+								document.querySelector(selector);
+
+
+							if (!target) {
+								return;
+							}
+
+
+							event.preventDefault();
+
+
+							const reduceMotion =
+								window.matchMedia(
+									'(prefers-reduced-motion: reduce)'
+								).matches;
+
+
+							target.scrollIntoView({
+
+								behavior:
+									reduceMotion
+										? 'auto'
+										: 'smooth',
+
+								block: 'start'
+
+							});
+
+						}
+					);
+
+				}
+			);
+
+		}
+	);
+
+</script>
+
+
+</body>
 
 </html>
